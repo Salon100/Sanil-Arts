@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanil Arts</title>
+    <link rel="icon" type="x-icon" href="Sanil.png">
+    <style>
+        /* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+.hero {
+    background: url('img/hero-bg.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('1.png') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.hero-content h1 {
+    font-size: 36px;
+}
+
+/* Gallery */
+.gallery-item {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.gallery-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Photo Section */
+.photo {
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.photo img {
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-container img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* Artists Section */
+.artists {
+    padding: 40px;
+    background-color: #e6e6e6;
+}
+
+.artists-content {
+    display: flex;
+    align-items: 100px;
+    justify-content: space-around;
+}
+
+.artists-content img {
+    width: 250px;
+    height: 350px;
+    float: right;
+      margin-left: 50px; 
+      margin-top: -70px ;
+      border-radius: 10px;/* Optional: Adds space between the image and the content */
+    border-radius: 10px;
+}
+
+/* Photo 1 Section */
+.photo1 {
+        background: url('canvas.jpg') no-repeat center center/cover;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(255, 255, 255);
+}
+
+.photo1-content h1 {
+    font-size: 36px;
+}
+
+/* Exhibitions Section */
+    /* General styling */
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Section Styling */
+        section.exhibitions {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section.exhibitions h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        section.exhibitions p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Progress Bar Styling */
+        .progress {
+            margin: 15px 0;
+            margin-left: 300px;
+            text-align: left;
+        }
+
+        .progress span {
+            display: block;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .bar {
+            background-color: #ddd;
+            border-radius: 10px;
+            width: 20%;
+            height: 10px;
+        }
+
+        .fill {
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* CSS Doughnut (Pie) Chart */
+        .pie-chart-container {
+            margin-top: -175px;
+            margin-left: 350px;
+            width: 250px;
+            height: 250px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .pie-chart {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(#f1cf9d 95% , #ddd 95%); /* 95% yellow, 5% gray */
+            clip-path: circle(50% at 50% 50%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hole {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            background-color: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .pie-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+
+/* Join Us Section */
+.join-us {
+    background-color: #fff1ba;
+    text-align: center;
+    padding: 100px;
+}
+
+.join-us .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 250px;
+}
+.join-us img{
+      width: 200px;
+      height: autopx;
+      float: right;
+      margin-left: 30px; 
+      margin-top: -175px ;
+      border-radius: 10px;/* Optional: Adds space between the image and the content */
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 120px 20px;
+}
+
+.hero-section h2 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 20px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-section li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Stats Section */
+.stats-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    background-color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: #cc5200;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+  /* Global reset for body */
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling the logo */
+        .logo {
+            position: absolute;
+            top: 40px;   /* Distance from the top of the page */
+            left: 70px;  /* Distance from the left of the page */
+            width: 60px;  /* Smaller logo size */
+            height: auto;
+        
+            .gallery {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.gallery {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #fff; /* Match background */
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            grid-gap: 20px;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .gallery-item:nth-child(1),
+        .gallery-item:nth-child(2),
+        .gallery-item:nth-child(4),
+        .gallery-item:nth-child(5) {
+            grid-column: span 1;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column: span 2;
+            justify-self: center;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+.large {
+    grid-column: span 2; /* Make the center image larger */
+}
+
+</style>
+</head>
+<body>
+    <img src="SanilArts.png" alt="Sanil Arts Logo" class="logo">
+    <header>
+        <h1>Sanil Arts</h1>
+        <nav>
+            <ul>
+                <li><a href="sanilart.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Job.html">Job</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>   
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experience True Artistic Innovation with Sanil Arts</h1>
+            <p>Where creativity meets imagination to bring stunning visuals to life!</p>
+        </div>
+    </section>
+    
+    <!--Gallery-->
+    <section class="gallery">
+        <div class="gallery-item">
+            <div class="gallery-item"><img src="sandeep.jpg" alt="Art 1"></div>
+            <div class="gallery-item"><img src="2.jpg" alt="Art 2"></div>
+            <div class="gallery-item"><img src="baby.jpg" alt="Art 3"></div>
+            <div class="gallery-item"><img src="3.jpg" alt="Art 4"></div>
+            <div class="gallery-item"><img src="4.jpg" alt="Art 5"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Inspiring Creativity Through Art</h2>
+        <p>Empowering Artists to Explore New Horizons</p>
+        <div class="gallery-container">
+           
+            <img src="5.jpg" alt="Artwork 5">
+            <img src="6.jpg" alt="Artwork 6">
+            
+        </div>
+    </section>
+
+    <!--Photo Section -->
+    <section class="photo">
+        <h2> We deliver powerful artistic solutions </h2>
+        <p> We provide unique, personalized art experiences that inspire and engage effectively. </p>
+        <div class="photo">
+
+            <img src="family.jpg">
+
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section class="artists">
+        <h2>Meet Our Artists</h2>
+        <div class="artists-content">
+            <div class="artist-text">
+                <p>Sanil Arts is home to talented and experienced artists dedicated to delivering exceptional works of art.</p>
+                <ul>
+                    <li><strong>Artistic Excellence:</strong> Each piece is crafted with precision and creativity.</li>
+                    <li><strong>Dynamic Approach:</strong> We explore different artistic styles and techniques.</li>
+                    <li><strong>Artistic Integrity:</strong> Our artists stay true to their vision and artistic values.</li>
+                </ul>
+            </div>
+            <img src="1.jpg" alt="Sanil Artist">
+        </div>
+    </section>
+
+    <!-- Photo 1 Section -->
+    <section class="photo1">
+        <div class="photo1-content">
+            <h1>A Deep Dive into Creativity and Expression</h1>
+            <p>Transform your space with our new art collection—where creativity inspires and beauty speaks.</p>
+        </div>
+    </section>
+
+ <!-- Exhibitions Section -->
+ <section class="exhibitions">
+    <h2>Key Highlights of Our Studio's Exhibitions</h2>
+    <div class="exhibition-content">
+        <p>From exhibitions to collaborations, our highlights reflect our dedication to a thriving art community.</p>
+        
+        <!-- Progress Bars for Teamwork and Support -->
+        <div class="progress">
+            <span>Teamwork</span>
+            <div class="bar">
+                <div class="fill" style="width: 95%; background-color: #f1cf9d;"></div>
+            </div>
+        </div>
+        
+        <div class="progress">
+            <span>Support</span>
+            <div class="bar">
+                <div class="fill" style="width: 95%; background-color: #f1cf9d;"></div>
+            </div>
+        </div>
+        
+        <!-- Additional Progress Bars or Highlights -->
+        <div class="progress">
+            <span>Creativity</span>
+            <div class="bar">
+                <div class="fill" style="width: 95%; background-color: #f1cf9d;"></div>
+            </div>
+        </div>
+        
+        <!-- CSS Doughnut Chart -->
+        <div class="pie-chart-container">
+            <div class="pie-chart"></div>
+            <div class="hole"></div>
+            <div class="pie-text">95%</div>
+            <p> 95% of our artists return each year, showing our strong community and their satisfaction. </p>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Join Us Section -->
+    <section class="join-us">
+        <h2>We're Seeking Exceptional Artists</h2>
+        <p>Join us and share your creativity with the world!</p>
+        <a href="Contact.html" class="btn">Get in touch with us</a>
+    </div>
+    <img src="balenshah.jpg" alt="Sanil Artist" height="300" width="auto" border-radius="10px">
+</div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Sanil Arts | All Rights Reserved. | Follow us on <a href="https://www.instagram.com/sanil_arts_/" style="color: yellow; text-decoration: none;">Instagram</a>, <a href="https://www.facebook.com/profile.php?id=100084654287003" style="color: yellow; text-decoration: none;">Facebook</a></p>
+    </footer> 
+</body>
+</html>

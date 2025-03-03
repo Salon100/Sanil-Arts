@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanil Arts - About Us</title>
+    <link rel="icon" type="x-icon" href="Sanil.png">
+    <style>
+        /* Reset body margin and padding */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* About Us section styling */
+        .about-us {
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .about-us h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Grid layout for images */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery img {
+            width: auto;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Team Section */
+        * {
+            margin-top: 10px;
+            margin: 10;
+            padding: 10;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider-container {
+            width: 100%;
+            height: auto;
+            max-width: 1200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider .card {
+            min-width: 300px;
+            margin-right: 20px;
+            background-color: #e4e4e4;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.5s ease;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 20%;
+            font-size: 18px;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+        @media (max-width: 768px) {
+            .slider .card {
+                min-width: 200px;
+            }
+        }
+
+        /*back-btn*/
+        .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            font-size: 30px;
+            color: #333;
+            padding: 10px;
+            background: #ddd;
+            border-radius: 50%;
+        }
+        .back-btn:hover {
+            background: #eaeaea;
+            color: #000;
+        }
+         /* Global reset for body */
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling the logo */
+        .logo {
+            position: absolute;
+            top: 10px;   /* Distance from the top of the page */
+            left: 70px;  /* Distance from the left of the page */
+            width: 60px;  /* Smaller logo size */
+            height: auto;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 1000px;
+            padding: 2rem;
+            margin-top: 50px;
+        }
+
+        .art-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #333;
+            line-height: 1.2;
+        }
+
+        .main-title span:first-child {
+            color: #666;
+            font-weight: 300;
+            display: block;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Button Styles */
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+            transition: 0.2s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #555;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Image moved to bottom */
+        Image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+        
+        /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+            }
+            .gallery-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <img src="SanilArts.png" alt="Sanil Arts Logo" class="logo">
+
+        <a href="sanilart.html" class="back-btn">&#8592;</a>
+
+        <h1>About Us</h1>
+        <p>Welcome to Sanil Arts, where creativity and passion come together to bring unique art pieces to life. Our mission is to inspire through visual storytelling and provide a platform for artistic expression. Our team is dedicated to bringing fresh ideas and high-quality artwork to all our clients.</p>
+        <p>At Sanil Arts, we offer a wide range of art pieces and services to meet the unique needs of our clients. From custom commissions to art classes, we’re dedicated to providing an enriching and memorable experience.
+        Customer satisfaction is our top priority. We focus on fulfilling every artistic desire and ensuring our clients are happy with the results.</p>
+        
+        <div class="image-gallery">
+            <img src="kumari.jpg" alt="Art Image 2">
+            <img src="team.jpg" alt="Art Image 1">
+            <img src="27.jpg" alt="Art Image 3">
+        </div>
+    </section>
+
+    <div class="container">
+        <h1 class="main-title">
+            <span>Art Studio</span>
+             Unleash Your Creativity
+        </h1>
+        <h2 class="subtitle">Empower your artistic journey</h2>
+        <p class="tagline">Unlock limitless possibilities with our innovative solutions and ideas</p>
+        
+        
+        
+        <!-- Gallery Section -->
+        <div id="gallery" class="gallery">
+            <img src="23.jpg" alt="Artwork 1">
+            <img src="24.jpg" alt="Artwork 2">
+            <img src="26.jpg" alt="Artwork 3">
+        </div>
+
+        <!-- Image moved to bottom -->
+        <div id="Image" class="Image">
+        <img src="22.jpg" alt="Art Studio Creative Workspace" class="art-image">
+
+        <div>
+        <!-- Call-to-Action Button -->
+        <a href="Gallery.html" class="cta-button">Explore Our Art</a>
+        </div>
+
+    </div>
+
+    <div class="slider-container">
+       <div>
+            <h2>Meet Our Team</h2>
+            <p>Dedicated professionals driving our success</p>
+            </div>
+            
+        <div class="slider">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="SanilBishwokarma.png" alt="Member 1">
+                <h3>Sanil Bishwokarma</h3>
+                <p>CEO & Founder</p>
+                <p>Founder and lead artist, Sanil is the creative force behind the studio. He loves to express his artistic vision through various mediums and techniques and is dedicated to providing a unique and inspiring experience for our customers.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="Suprina Bishwokarma.jpg" alt="Member 2">
+                <h3>Suprina Bishwokarma</h3>
+                <p>Co- Founder</p>
+                <p>Co-founder of Sanil Arts, is a creative visionary with a passion for design and art. She plays a key role in shaping the brand’s direction, bringing fresh, innovative ideas to the table. Suprina ensures that Sanil Arts consistently delivers unique, high-quality designs.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="Alvin Magar.jpg" alt="Member 3">
+                <h3>Alvin Magar</h3>
+                <p>Chairman/Advisor</p>
+                <p>Alvin Magar provides strategic guidance and leadership to Sanil Art, helping shape its vision and growth. His expertise drives the brand’s success and innovation. With a strong commitment to artistic excellence, he continues to inspire creativity and expansion.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="Hemanta Yogi.jpg" alt="Member 4">
+                <h3>Hemanta Yogi</h3>
+                <p>General Manager</p>
+                <p>Hemanta is our operations manager, responsible for ensuring the smooth running of the studio. With his extensive experience in managing creative teams, Hemanta is committed to delivering exceptional customer service and fostering a welcoming environment for all.</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="Sahana Shrestha.jpg" alt="Member 5">
+                <h3>Sahana Shrestha</h3>
+                <p>Art manager/Artist</p>
+                <p>Sahana Shrestha is a talented artist and dedicated art manager at Sanil Art. She oversees creative projects, ensuring artistic quality and innovation. Her passion and expertise help bring unique artistic visions to life.</p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="Sudichhya Dangol.png" alt="Member 6">
+                <h3>Sudichhya Dangol</h3>
+                <p>Content Creator</p>
+                <p>Sudikshya Dangol is a creative and skilled content creator at Sanil Art. She develops engaging content that showcases the brand’s artistic vision. Her creativity and dedication help connect art with a wider audience.</p>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="Kim Gurung.png." alt="Member 7">
+                <h3>Kim Gurung</h3>
+                <p>Social Media Handler</p>
+                <p>Kim Gurung is the social media manager at Sanil Art, responsible for building the brand’s online presence. She curates engaging content and strategizes digital campaigns to connect with a wider audience. Her expertise ensures that Sanil Art reaches and inspires art enthusiasts globally.</p>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="Salon Chand Sodari.jpg" alt="Member 8">
+                <h3>Salon Chand Sodari</h3>
+                <p>Artist/Graphics Designer</p>
+                <p>Salon is a skilled artist and graphic designer, blending traditional artistry with modern design techniques. With a keen eye for detail, Salon creates impactful logos, branding, and illustrations. As a core member of Sanil Arts, Salon consistently delivers creative and meaningful designs.</p>
+            </div>
+
+        </div>
+
+        <button class="slider-btn prev-btn">&#129168;</button>
+        <button class="slider-btn next-btn">&#129170;</button>
+    </div>
+
+    <script>
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const slider = document.querySelector('.slider');
+        const cards = document.querySelectorAll('.card');
+        let index = 0;
+
+        // Update the slider width to fit all cards
+        const updateSliderWidth = () => {
+            const totalWidth = Array.from(cards).reduce((acc, card) => acc + card.offsetWidth + 20, 0);
+            slider.style.width = `${totalWidth}px`;
+        };
+
+        // Event listeners for the slider buttons
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) {
+                index--;
+                updateSlider();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (index < cards.length - 1) {
+                index++;
+                updateSlider();
+            }
+        });
+
+        // Function to update the slider position
+        function updateSlider() {
+            const cardWidth = cards[0].offsetWidth + 20; // Card width + margin
+            slider.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+
+        // Call updateSliderWidth to adjust slider container width
+        updateSliderWidth();
+    </script>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Sanil Arts.| All Rights Reserved. | Follow us on <a href="https://www.instagram.com/sanil_arts_/" style="color: yellow; text-decoration: none;">Instagram</a>, <a href="https://www.facebook.com/profile.php?id=100084654287003" style="color: yellow; text-decoration: none;">Facebook</a></p>
+</footer>
+
+</body>
+</html>

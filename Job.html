@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Section - Sanil Arts</title>
+    <link rel="icon" type="x-icon" href="Sanil.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f1cf9d, #fad0c4);
+            text-align: center;
+        }
+        .job-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards ease-out;
+            position: relative;
+        }
+        .job-section img {
+            height:350px;
+            width: 550px;
+            border-radius: 12px;
+            margin-bottom: 5px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .job {
+            border-bottom: 2px dashed #f1cf9d;
+            padding: 20px 0;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn 1s forwards ease-out 0.5s;
+        }
+        .job:last-child {
+            border-bottom: none;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .job h3 {
+            margin: 0;
+            color: #f1cf9d;
+            font-size: 24px;
+        }
+        .job p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 16px;
+        }
+        .apply-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: linear-gradient(45deg, #f1cf9d, #f1cf9d);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: popIn 0.5s forwards ease-out 1s;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .apply-btn:hover {
+            background: linear-gradient(45deg, #f1cf9d, #f1cf9d);
+            transform: scale(1.05);
+        }
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #333;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Styling the logo */
+        .logo {
+            position: absolute;
+            top: 40px;   /* Distance from the top of the page */
+            left: 70px;  /* Distance from the left of the page */
+            width: 60px;  /* Smaller logo size */
+            height: auto;
+        }
+
+         /*back-btn*/
+         .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            font-size: 30px;
+            color: #333;
+            padding: 10px;
+            background: #ddd;
+            border-radius: 50%;
+        }
+        .back-btn:hover {
+            background: #eaeaea;
+            color: #000;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <img src="SanilArts.png" alt="Sanil Arts Logo" class="logo">
+
+    <a href="sanilart.html" class="back-btn">&#8592;</a>
+
+    <div class="job-section">
+        <img src="22.jpg" alt="Artistic Job Banner">
+        <h2 style="color:#f1cf9d; font-size: 28px;">✨ Job Openings at Sanil Arts ✨</h2>
+        <div class="job">
+            <h3>🎨 Artist</h3>
+            <p><strong>📍 Location:</strong> Kathmandu, Nepal</p>
+            <p><strong>💡 Experience:</strong> Open to all skill levels</p>
+            <p><strong>📝 Job Type:</strong>Full-Time</p>
+            <p>We are looking for passionate and creative artists to join our team at Sanil Arts. If you love creating stunning artwork and want to be part of a growing art brand, apply now!</p>
+            <a href="Apply Now.html" class="apply-btn">Apply Now </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Sanil Arts | All Rights Reserved | Follow us on <a href="https://www.instagram.com/sanil_arts_/" style="color: yellow; text-decoration: none;">Instagram</a>, <a href="https://www.facebook.com/profile.php?id=100084654287003" style="color: yellow; text-decoration: none;">Facebook</a>
+    </div>
+    
+</body>
+</html>
